@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Exam": {
+      "title": "Exam Configuration",
+      "description": "Stores the teacher-defined exam structure and answer keys",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "keyData": { "type": "object" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "keyData"]
+    },
+    "Submission": {
+      "title": "Student Submission",
+      "description": "Stores individual student answers and final scores",
+      "type": "object",
+      "properties": {
+        "studentName": { "type": "string" },
+        "studentData": { "type": "object" },
+        "score": { "type": "number" },
+        "submittedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["studentName", "score"]
+    }
+  },
+  "firestore": {
+    "/exams/{examId}": {
+      "schema": "Exam",
+      "description": "Collection of available exams"
+    },
+    "/exams/{examId}/submissions/{submissionId}": {
+      "schema": "Submission",
+      "description": "Submissions for a specific exam"
+    }
+  }
+}

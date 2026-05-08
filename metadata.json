@@ -1,0 +1,6 @@
+{
+  "name": "Hệ Thống Chấm Điểm Thi Tự Động",
+  "description": "Ứng dụng giúp học sinh nhập đáp án và tự động tính điểm theo cấu trúc đề thi mới (Phần 1: Trắc nghiệm, Phần 2: Đúng/Sai, Phần 3: Trả lời ngắn).",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
